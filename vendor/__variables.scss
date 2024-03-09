@@ -1,0 +1,207 @@
+/*
+* VARIABLES
+*/
+
+// Structure
+$grid-width: 95%;
+$grid-gap: 20px;
+
+// Breakpoints
+$breakpoint-sm: 576;
+$breakpoint-md: 768;
+$breakpoint-lg: 992;
+$breakpoint-xl: 1200;
+
+// Navbar
+$primary-color: #3498db;
+$hover-color: #2980b9;
+$navbar-height: 70px;
+
+// Footer
+$footer-color: #fff;
+
+// Buttons
+$buttons: (
+    primary: (
+        color: #2f87c2,
+        border-color: #2776aa
+    ),
+    success: (
+        color: #2bbb67,
+        border-color: #26a55b
+    ),
+    info: (
+        color: #3498db,
+        border-color: #2b84bf
+    ),
+    warning: (
+        color: #e69822,
+        border-color: #d48a1c
+    ),
+    error: (
+        color: #e74c3c,
+        border-color: #c64133
+    ),
+    tooltip: (
+        bg-color: #505050,
+        text-color: #b8c2ca
+    ),
+    color: white,
+    hover-percent: 10%,
+    transition-duration: 0.3s,
+    transition-ease: ease
+);
+
+// Backgrounds
+$backgrounds: (
+    dark: (
+        color: #343a40,
+        text: #fafafa
+    ),
+    light: (
+        color: #fafafa,
+        text: #343a40
+    ),
+    muted: (
+        color: #d6dce1
+    ),
+    primary: (
+        color: #67bdf6,
+        border: #39a7f0,
+        text: #0c5460
+    ),
+    success: (
+        color: #d4edda,
+        border: #c3e6cb,
+        text: #155724
+    ),
+    info: (
+        color: #d1ecf1,
+        border: #bee5eb,
+        text: #0c5460
+    ),
+    warning: (
+        color: #e67e22,
+        border: #d48a1c,
+        text: #b77716
+    ),
+    error: (
+        color: #e74c3c
+    ),
+    danger: (
+        color: #f8d7da,
+        border: #f5c6cb,
+        text: #721c24
+    )
+);
+
+// Alerts
+$alerts-styles: (
+    padding: 15px,
+    margin-bottom: 15px,
+    border-radius: 4px,
+    success: (
+        bg-color: #d4edda,
+        border-color: #c3e6cb,
+        text-color: #155724
+    ),
+    info: (
+        bg-color: #d1ecf1,
+        border-color: #bee5eb,
+        text-color: #0c5460
+    ),
+    warning: (
+        bg-color: #fff3cd,
+        border-color: #ffeeba,
+        text-color: #856404
+    ),
+    danger: (
+        bg-color: #f8d7da,
+        border-color: #f5c6cb,
+        text-color: #721c24
+    )
+);
+
+// Forms
+$forms-styles: (
+    primary-color: #007bff,
+    secondary-color: #6c757d,
+    border-radius: 0.25rem,
+    error-color: #e74c3c
+);
+
+// Border
+$border-sizes: (
+    none: 0,
+    xs: 1px,
+    sm: 2px,
+    md: 3px,
+    lg: 4px,
+    xl: 6px,
+    '2xl': 8px,
+    '3xl': 12px,
+    '4xl': 16px,
+    '5xl': 24px
+);
+
+$border-styles: (
+    solid,
+    dashed,
+    dotted,
+    double
+);
+
+$border-colors: (
+    primary: #007bff,
+    secondary: #6c757d,
+    success: #28a745,
+    danger: #dc3545,
+    warning: #ffc107,
+    info: #17a2b8,
+    light: #f8f9fa,
+    dark: #343a40
+);
+
+// Font
+$font-sizes: (
+    xs: 0.75rem,
+    sm: 0.875rem,
+    normal: 1rem,
+    lg: 1.25rem,
+    xl: 1.5rem,
+    '2xl': 1.875rem,
+    '3xl': 2.25rem,
+    '4xl': 3rem,
+    '5xl': 4rem,
+    '6xl': 5rem,
+    '7xl': 6rem,
+    '8xl': 7rem,
+    '9xl': 8rem
+);
+
+// Spacing
+$margins: (
+    mt: 'margin-top',
+    mb: 'margin-bottom',
+    ml: 'margin-left',
+    mr: 'margin-right'
+);
+
+$paddings: (
+    pt: 'padding-top',
+    pb: 'padding-bottom',
+    pl: 'padding-left',
+    pr: 'padding-right'
+);
+
+$grid-gaps: (
+    xs: 0.5rem,
+    sm: 1rem,
+    md: 1.5rem,
+    lg: 2rem,
+    xl: 3rem,
+    '2xl': 4rem,
+    '3xl': 6rem,
+    '4xl': 8rem,
+    '5xl': 10rem
+);

@@ -1,0 +1,35 @@
+// main.scss
+
+@import './_variables';
+
+/*
+* ALERTS
+*/
+@mixin alert-styles($bg-color, $border-color, $text-color) {
+    padding: map-get($alerts-styles, padding);
+    margin-bottom: map-get($alerts-styles, margin-bottom);
+    border-radius: map-get($alerts-styles, border-radius);
+    border: 1px solid $border-color;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+.alert {
+    @include alert-styles(transparent, transparent, black);
+}
+
+.alert-success {
+    @include alert-styles(map-get($alerts-styles, success, bg-color), map-get($alerts-styles, success, border-color), map-get($alerts-styles, success, text-color));
+}
+
+.alert-info {
+    @include alert-styles(map-get($alerts-styles, info, bg-color), map-get($alerts-styles, info, border-color), map-get($alerts-styles, info, text-color));
+}
+
+.alert-warning {
+    @include alert-styles(map-get($alerts-styles, warning, bg-color), map-get($alerts-styles, warning, border-color), map-get($alerts-styles, warning, text-color));
+}
+
+.alert-danger {
+    @include alert-styles(map-get($alerts-styles, danger, bg-color), map-get($alerts-styles, danger, border-color), map-get($alerts-styles, danger, text-color));
+}

@@ -1,0 +1,52 @@
+@import './_variables';
+
+/*
+* BACKGROUND COLORS
+*/
+@mixin background($color, $border: null, $text: null) {
+    background-color: $color;
+
+    @if $border != null {
+        border: 1px solid $border;
+    }
+
+    @if $text != null {
+        color: $text;
+    }
+}
+
+.bg-dark {
+    @include background(map-get($backgrounds, dark, color), map-get($backgrounds, dark, color), map-get($backgrounds, dark, text));
+}
+
+.bg-light {
+    @include background(map-get($backgrounds, light, color), map-get($backgrounds, light, color), map-get($backgrounds, light, text))
+}
+
+.bg-muted {
+    @include background(map-get($backgrounds, muted, color));
+}
+
+.bg-primary {
+    @include background(map-get($backgrounds, primary, color), map-get($backgrounds, primary, border), map-get($backgrounds, primary, text));
+}
+
+.bg-success {
+    @include background(map-get($backgrounds, success, color), map-get($backgrounds, success, border), map-get($backgrounds, success, text));
+}
+
+.bg-info {
+    @include background(map-get($backgrounds, info, color), map-get($backgrounds, info, border), map-get($backgrounds, info, text));
+}
+
+.bg-warning {
+    @include background(map-get($backgrounds, warning, color), map-get($backgrounds, warning, border), map-get($backgrounds, warning, text));
+}
+
+.bg-danger {
+    @include background(map-get($backgrounds, danger, color), map-get($backgrounds, danger, border), map-get($backgrounds, danger, text));
+}
+
+.bg-error {
+    @include background(map-get($backgrounds, error, color));
+}

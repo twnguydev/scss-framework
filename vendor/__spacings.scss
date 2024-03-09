@@ -1,0 +1,96 @@
+@import './_variables';
+
+/*
+* SPACINGS
+*/
+@function calculate-spacing($spacing) {
+    @return $spacing * 1px;
+}
+
+@mixin margin($direction, $spacing) {
+    $property: map-get($margins, $direction);
+    #{$property}: calculate-spacing($spacing);
+}
+
+@mixin padding($direction, $spacing) {
+    $property: map-get($paddings, $direction);
+    #{$property}: calculate-spacing($spacing);
+}
+
+@for $spacing from 0 through 100 {
+    .mt-#{$spacing} {
+        @include margin('mt', $spacing);
+    }
+
+    .mb-#{$spacing} {
+        @include margin('mb', $spacing);
+    }
+
+    .ml-#{$spacing} {
+        @include margin('ml', $spacing);
+    }
+
+    .mr-#{$spacing} {
+        @include margin('mr', $spacing);
+    }
+
+    .m-#{$spacing} {
+        @include margin('mt', $spacing);
+        @include margin('mb', $spacing);
+        @include margin('ml', $spacing);
+        @include margin('mr', $spacing);
+    }
+
+    .m-horizontal-#{$spacing} {
+        @include margin('ml', $spacing);
+        @include margin('mr', $spacing);
+    }
+
+    .m-vertical-#{$spacing} {
+        @include margin('mt', $spacing);
+        @include margin('mb', $spacing);
+    }
+}
+
+@for $spacing from 0 through 100 {
+    .pt-#{$spacing} {
+        @include padding('pt', $spacing);
+    }
+
+    .pb-#{$spacing} {
+        @include padding('pb', $spacing);
+    }
+
+    .pl-#{$spacing} {
+        @include padding('pl', $spacing);
+    }
+
+    .pr-#{$spacing} {
+        @include padding('pr', $spacing);
+    }
+
+    .p-#{$spacing} {
+        @include padding('pt', $spacing);
+        @include padding('pb', $spacing);
+        @include padding('pl', $spacing);
+        @include padding('pr', $spacing);
+    }
+
+    .p-horizontal-#{$spacing} {
+        @include padding('pl', $spacing);
+        @include padding('pr', $spacing);
+    }
+
+    .p-vertical-#{$spacing} {
+        @include padding('pt', $spacing);
+        @include padding('pb', $spacing);
+    }
+}
+
+@each $size, $value in $grid-gaps {
+    @media screen and (min-width: 768px) {
+        .gap-#{$size} {
+            grid-gap: $value;
+        }
+    }
+}

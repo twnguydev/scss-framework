@@ -1,0 +1,34 @@
+@import './_variables';
+
+/*
+* BORDER CONTAINERS
+*/
+@mixin border-size($size) {
+    border-width: map-get($border-sizes, $size);
+}
+
+@mixin border-style($style) {
+    border-style: $style;
+}
+
+@mixin border-color($color) {
+    border-color: map-get($border-colors, $color);
+}
+
+@each $size, $value in $border-sizes {
+    .border-#{$size} {
+        @include border-size($size);
+    }
+}
+
+@each $style in $border-styles {
+    .border-#{$style} {
+        @include border-style($style);
+    }
+}
+
+@each $color, $value in $border-colors {
+    .border-#{$color} {
+        @include border-color($color);
+    }
+}

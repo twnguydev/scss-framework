@@ -1,0 +1,79 @@
+@import './_variables';
+
+/*
+* BUTTONS
+*/
+@mixin transition($property: all, $duration: 0.3s, $ease: ease) {
+    transition: $property $duration $ease;
+}
+
+@mixin button-styles($bg-color, $border-color, $text-color) {
+    @include transition;
+    background-color: $bg-color;
+    border-color: $border-color;
+    color: $text-color;
+
+    &:hover {
+        background-color: darken($bg-color, map-get($buttons, hover-percent));
+        border-color: darken($border-color, map-get($buttons, hover-percent));
+    }
+}
+
+.btn {
+    @include transition;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    &.btn-sm {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    &.btn-lg {
+        font-size: 14px;
+        padding: 15px 25px;
+    }
+
+    &.btn-xl {
+        max-width: auto;
+        font-size: 19px;
+        padding: 20px 30px;
+    }
+}
+
+.btn[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn:active,
+.btn.active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    @include button-styles(map-get($buttons, primary, color), map-get($buttons, primary, border-color), map-get($buttons, color));
+}
+
+.btn-success {
+    @include button-styles(map-get($buttons, success, color), map-get($buttons, success, border-color), map-get($buttons, color));
+}
+
+.btn-info {
+    @include button-styles(map-get($buttons, info, color), map-get($buttons, info, border-color), map-get($buttons, color));
+}
+
+.btn-warning {
+    @include button-styles(map-get($buttons, warning, color), map-get($buttons, warning, border-color), map-get($buttons, color));
+}
+
+.btn-error {
+    @include button-styles(map-get($buttons, error, color), map-get($buttons, error, border-color), map-get($buttons, color));
+}

@@ -1,0 +1,42 @@
+@import './_variables';
+
+/*
+* FONT SIZE & STYLES
+*/
+@mixin font-size($size) {
+    font-size: map-get($font-sizes, $size);
+}
+
+@mixin font-style($style) {
+    font-style: $style;
+}
+
+@mixin font-weight($weight) {
+    font-weight: $weight;
+}
+
+@each $size, $value in $font-sizes {
+    .fs-#{$size} {
+        @include font-size($size);
+    }
+}
+
+.fw-bold {
+    @include font-weight(bold);
+}
+
+.fw-normal {
+    @include font-weight(normal);
+}
+
+.fw-light {
+    @include font-weight(lighter);
+}
+
+.italic {
+    @include font-style(italic);
+}
+
+.normal {
+    @include font-style(normal);
+}

@@ -1,0 +1,61 @@
+/*
+* TOOLTIPS
+*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 5px;
+
+    &[data-placement="top"],
+    &[data-placement="bottom"],
+    &[data-placement="left"],
+    &[data-placement="right"] {
+        position: relative;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &::before {
+            content: attr(data-title);
+            position: absolute;
+            padding: 7px;
+            border-radius: 5px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 9999;
+            opacity: 0.8;
+            display: block;
+            background-color: #333;
+            color: #fff;
+        }
+    }
+
+    &[data-title=""]:hover::before,
+    &:not([data-title]):hover::before {
+        content: none;
+    }
+
+    &[data-placement="top"]:hover::before {
+        top: -10px;
+        transform: translate(-50%, -100%);
+    }
+
+    &[data-placement="bottom"]:hover::before {
+        top: 45px;
+        transform: translateX(-50%);
+    }
+
+    &[data-placement="left"]:hover::before {
+        left: -110%;
+        transform: translateY(-50%);
+    }
+
+    &[data-placement="right"]:hover::before {
+        left: 110%;
+        transform: translateY(-50%);
+    }
+}

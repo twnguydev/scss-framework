@@ -1,0 +1,13 @@
+@import './_variables';
+
+/*
+* FOOTERS
+*/
+@mixin transition($property: all, $duration: 0.3s, $ease: ease) {
+    transition: $property $duration $ease;
+}
+
+footer {
+    padding: 2rem 0;
+    width: 100%;
+}

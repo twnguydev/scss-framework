@@ -1,0 +1,26 @@
+@import './_variables';
+
+/*
+* CONTAINERS
+*/
+@mixin container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    @include container;
+    width: $grid-width;
+    border-radius: 5px;
+    padding: $grid-gap / 2;
+}
+
+.container-fluid {
+    @include container;
+    width: 100%;
+    padding: $grid-gap / 2;
+}
+
+main {
+    padding-top: $navbar-height;
+}

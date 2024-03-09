@@ -1,0 +1,44 @@
+/*
+* FRAMEWORK CSS
+* Tanguy Gibrat
+* Epitech 2024
+*/
+
+@import './vendor/_structure';
+@import './vendor/_variables';
+@import './vendor/_spacings';
+@import './vendor/_borders';
+@import './vendor/_fonts';
+
+@import './vendor/_flexbox';
+@import './vendor/_grid';
+
+@import './vendor/_containers';
+@import './vendor/_visibility';
+@import './vendor/_backgrounds';
+@import './vendor/_buttons';
+@import './vendor/_tooltips';
+@import './vendor/_images';
+@import './vendor/_text';
+@import './vendor/_alerts';
+@import './vendor/_navbars';
+@import './vendor/_modals';
+@import './vendor/_tabs';
+@import './vendor/_forms';
+@import './vendor/_footers';
+
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/*
+* RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}

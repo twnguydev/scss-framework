@@ -1,0 +1,78 @@
+@import './_variables';
+
+/*
+* VISIBILITY
+*/
+.visible-sm {
+    display: none;
+
+    @media only screen and (max-width: #{$breakpoint-sm - 1}px) {
+        display: block !important;
+    }
+}
+
+.visible-md {
+    display: none;
+
+    @media only screen and (min-width: #{$breakpoint-sm}px) and (max-width: #{$breakpoint-md - 1}px) {
+        display: block !important;
+    }
+}
+
+.visible-lg {
+    display: none;
+
+    @media only screen and (min-width: #{$breakpoint-md}px) and (max-width: #{$breakpoint-lg - 1}px) {
+        display: block !important;
+    }
+}
+
+.visible-xl {
+    display: none;
+
+    @media only screen and (min-width: #{$breakpoint-lg}px) and (max-width: #{$breakpoint-xl - 1}px) {
+        display: block !important;
+    }
+}
+
+.hidden-sm {
+    display: block !important;
+
+    @media only screen and (max-width: #{$breakpoint-sm - 1}px) {
+        display: none !important;
+    }
+}
+
+.hidden-md {
+    display: block !important;
+
+    @media only screen and (min-width: #{$breakpoint-sm}px) and (max-width: #{$breakpoint-md - 1}px) {
+        display: none !important;
+    }
+}
+
+.hidden-lg {
+    display: block !important;
+
+    @media only screen and (min-width: #{$breakpoint-md}px) and (max-width: #{$breakpoint-lg - 1}px) {
+        display: none !important;
+    }
+}
+
+.hidden-xl {
+    display: block !important;
+
+    @media only screen and (min-width: #{$breakpoint-lg}px) and (max-width: #{$breakpoint-xl - 1}px) {
+        display: none !important;
+    }
+}
+
+@media print {
+    .visible-print {
+        display: block !important;
+    }
+
+    .hidden-print {
+        display: none !important;
+    }
+}

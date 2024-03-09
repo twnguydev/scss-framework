@@ -1,0 +1,56 @@
+@import './_variables';
+
+/*
+* STRUCTURE
+*/
+@mixin row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: $grid-gap;
+    margin-bottom: $grid-gap;
+
+    @media screen and (max-width: 768px) {
+        grid-gap: 1rem;
+    }
+}
+
+.row {
+    @include row;
+}
+
+@for $start from 1 through 12 {
+    @for $span from 1 through (12 - $start + 1) {
+        body .col-#{$start}-#{$start + $span - 1} {
+            grid-column: #{$start} / span #{$span};
+            grid-row: auto;
+
+            @media screen and (max-width: 768px) {
+                grid-column: span 12;
+            }
+        }
+    }
+}
+
+@for $start from 1 through 12 {
+    @for $span from 1 through (12 - $start + 1) {
+        body .col-#{$start}-#{$start + $span - 1}.no-wrap {
+            grid-column: #{$start} / span #{$span};
+            grid-row: auto;
+        }
+    }
+}
+
+@for $start from 1 through 12 {
+    body .col-#{$start} {
+        grid-column: span #{$start};
+        grid-row: auto;
+
+        @media screen and (max-width: 768px) {
+            grid-column: span 6;
+        }
+    
+        @media screen and (max-width: 423px) {
+            grid-column: span 12;
+        }
+    }
+}
