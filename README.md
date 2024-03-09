@@ -1,5 +1,7 @@
 # Framework Web Responsive
 
+<img width="908" alt="image" src="https://github.com/twnguydev/scss-framework/assets/154362306/ee3f5fcf-02f9-47be-88ef-5d10bd979cc3">
+
 ## Projet
 
 Le Framework Web Responsive est un ensemble d'outils CSS et JavaScript inspiré de Bootstrap pour faciliter la création de sites web responsives.
